@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+
+    <title>&#161Andale! - Turismo sulamericano</title>
+
+    <style>
+        body {
+            background-color: #fff;
+        }
+        header {
+            position: sticky;
+            top: 0;
+            left: 0;
+            background-color: #7dddf8;
+            z-index: 1;
+        }
+        strong {
+            font-weight: 900;
+        }
+        h1 {
+            font-weight: 400;
+            font-size: 3.5em;
+            color:#ef5356;
+        }
+        li a {
+            color: inherit;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .nav-link {
+            text-align: center;
+        }
+        #pacotes h2 {
+            margin-left: 15px;
+        }
+        #sobre h2 {
+            padding-top: 0;
+        }
+        #sobre img {
+            border-radius: 10px;
+            width: 100%;
+        }
+        hr {
+            margin: 0 0 1rem 0;
+            width: 90%;
+        }
+        section {
+            padding-top: 90px;
+        }
+        section:last-child {
+            padding-bottom: 90px;
+        }
+        .carousel-item img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+        }
+        .card img {
+            height: 200px;
+            object-fit: cover;
+        }
+        footer {
+            background-color: #17104bf7;
+            color: #fff;
+        }
+        footer img {
+            width: 35px;
+        }
+        footer img:hover {
+            cursor: pointer;
+        }
+        .borda {
+            border: 1px solid rgb(199, 198, 198);
+            border-radius: 10px;
+            padding: 30px;
+        }
+        @media screen and (min-width: 769px) and (max-width: 991px) {
+            #sobre h2 {
+                margin-top: 20px;
+            }
+            .carousel-item img {
+            height: 200px;
+            }
+            section {
+            padding-top: 40px;
+            }
+        }
+        @media screen and (min-width:576px) and (max-width: 768px) {
+            #sobre h2 {
+                margin-top: 20px;
+            }
+            .carousel-item img {
+            height: 170px;
+            }
+        }
+        @media screen and (max-width: 575px) {
+            #sobre h2 {
+                margin-top: 20px;
+            }
+            .carousel-item img {
+            height: 150px;
+            }
+            #contato iframe {
+                width: 100%;
+            }
+            footer img {
+            width: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header id="cabecalho">
+        <div class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <h1>&#161;AN<strong>DALE!</strong></h1>
+                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu" type="button">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <nav class="collapse navbar-collapse justify-content-end" id="menu">
+                    <ul class="nav navbar-nav nav-pills">
+                        <li class="nav-item">
+                            <a href="#pacotes" class="nav-link">Pacotes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#sobre" class="nav-link">Sobre</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#contato" class="nav-link">Contato</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- início do carousel  -->
+    <div class="carousel slide" data-bs-ride="carousel" id="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="2000"><img src="https://cdn.pixabay.com/photo/2019/12/10/10/53/architecture-4685608_1280.jpg" alt="" style="object-position: 100% 60%"></div>
+            <div class="carousel-item" data-bs-interval="2000"><img src="https://cdn.pixabay.com/photo/2016/11/21/14/31/vw-bus-1845719_1280.jpg" alt="" style="object-position: 100% 60%;"></div>
+            <div class="carousel-item" data-bs-interval="2000"><img src="https://cdn.pixabay.com/photo/2016/01/13/17/48/machupicchu-1138641_1280.jpg" alt="" style="object-position: 100% 45%"></div>
+            <div class="carousel-item" data-bs-interval="2000"><img src="https://cdn.pixabay.com/photo/2017/01/28/02/24/japan-2014619_1280.jpg" alt=""></div>
+            <div class="carousel-item" data-bs-interval="2000"><img src="https://cdn.pixabay.com/photo/2016/08/12/20/14/river-1589616_1280.jpg" alt=""></div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+    <!-- fim do carousel -->
+    <div class="container">        
+        <div data-bs-spy="scroll" data-bs-target="#cabecalho">
+            <section id="pacotes">
+                <h2>Pacotes</h2>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-sm-12 d-flex align-content-stretch mb-4">
+                            <div class="card">
+                                <div class="card-header"><h4>Uma volta nos Andes</h4></div>
+                                <img src="https://cdn.pixabay.com/photo/2017/09/01/00/48/inca-face-2702755_1280.jpg" style="object-position: 100% 20%;"
+                                />
+                                <div class="card-body d-flex align-content-between justify-content-center flex-wrap">
+                                    <p class="card-text">Prepare-se para uma jornada inesquecível pelas paisagens deslumbrantes e culturas fascinantes das montanhas mais altas da América do Sul. Você terá a oportunidade de caminhar por trilhas ancestrais na Bolívia, admirar vulcões imponentes no Chile, visitar antigas ruínas incas no Peru e se encantar com a rica diversidade de fauna e flora que habita esta região única.</p>
+                                    <button type="button" class="btn btn-warning">Faça sua reserva</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12 d-flex align-content-stretch mb-4">
+                            <div class="card">
+                                <div class="card-header"><h4>Majestosa Patagônia</h4></div>
+                                <img src="https://www.cvc.com.br/dicas-de-viagem/wp-content/uploads/2019/09/patagonia-argentina-734413168.jpg" style="object-position: 100% 100%;"
+                                />
+                                <div class="card-body d-flex align-content-between justify-content-center flex-wrap">
+                                    <p class="card-text">Explore a mágica e intocada beleza da Patagônia. De geleiras imponentes a florestas exuberantes e picos majestosos, você se perderá nas paisagens de tirar o fôlego dessa região remota e única. Uma jornada inesquecível para os amantes da natureza e aventureiros. Não perca a oportunidade de testemunhar a grandiosidade da Patagônia. Reserve agora e comece a contar os dias para uma aventura épica. </p>
+                                    <button type="button" class="btn btn-warning">Faça sua reserva</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12 d-flex align-content-stretch mb-4">
+                            <div class="card">
+                                <div class="card-header"><h4>Ruas da alegria!</h4></div>
+                                <img src="https://blog.123milhas.com/wp-content/uploads/2023/01/conheca-os-principais-carnavais-do-Brasil-conexao123-1.jpg" style="object-position: 100% 100%;"
+                                />
+                                <div class="card-body d-flex align-content-between justify-content-center flex-wrap">
+                                    <p class="card-text">Celebre o carnaval em sua forma mais autêntica em três dos destinos mais icônicos do Brasil. No Rio de Janeiro, testemunhe as escolas de samba desfilando com trajes deslumbrantes no Sambódromo. Em Salvador, você se entregará à batida contagiante dos trios elétricos. Em Recife, mergulhe na cultura do frevo e maracatu em uma experiência única do carnaval nordestino. Prepare-se para uma aventura única e inesquecível durante o carnaval brasileiro!</p>
+                                    <button type="button" class="btn btn-warning">Faça sua reserva</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12 d-flex align-content-stretch mb-4">
+                            <div class="card">
+                                <div class="card-header"><h4>Caribe colombiano</h4></div>
+                                <img src="https://a.cdn-hotels.com/gdcs/production134/d826/abf0b107-f5b9-4aec-a5b2-ee9d8125a709.jpg" style="object-position: 100% 100%;"
+                                />
+                                <div class="card-body d-flex align-content-between justify-content-center flex-wrap">
+                                    <p class="card-text">Descubra um paraíso tropical repleto de cultura e cores vibrantes. Passeie pelas charmosas ruas de Cartagena, com sua arquitetura colonial e fortalezas históricas, e depois siga para as praias intocadas de San Andrés, onde você poderá relaxar em cenários de tirar o fôlego. Navegue pelas águas cristalinas de Rosário e San Bernardo, mergulhe com snorkel em recifes deslumbrantes e saboreie a deliciosa gastronomia caribenha. Reserve agora e embarque nesta jornada paradisíaca!</p>
+                                    <button type="button" class="btn btn-warning">Faça sua reserva</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="sobre">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-6">
+                            <img src="https://media.gettyimages.com/id/1338030190/photo/young-couple-going-on-vacation.jpg?s=612x612&w=gi&k=20&c=ZspG4spEK6JQueZZyXtJj8oyrx655N3IH-jfqmXrmX0=" />
+                        </div>
+                        <div class="col-sm-12 col-md-12 col-lg-6 ">
+                            <h2 class="">Sobre</h2>
+                            <hr>
+                            <p>Descubra a América do Sul de uma maneira que caiba no seu bolso com nossa agência de turismo especializada em roteiros de baixo custo. Nossos pacotes são projetados para oferecer experiências autênticas e memoráveis, sem que você precise gastar uma fortuna. Com acomodações econômicas, transporte eficiente e roteiros cuidadosamente planejados, você poderá explorar as maravilhas naturais, culturais e históricas deste continente incrível de maneira acessível e descomplicada. De praias paradisíacas a montanhas imponentes, a América do Sul está ao seu alcance com nossa agência.</p>
+
+                            <p>Nosso compromisso é tornar o sonho de viajar pela América do Sul uma realidade para todos os tipos de viajantes. Oferecemos itinerários flexíveis, permitindo que você escolha as experiências que mais lhe interessam, enquanto mantém os custos sob controle. Nossos guias locais experientes irão enriquecer sua viagem com insights culturais e históricos, garantindo que você aproveite ao máximo cada destino. Viaje de maneira inteligente e econômica com nossa agência e embarque em uma jornada inesquecível pela América do Sul.</p>
+                        </div>
+                    </div>
+                </div>                
+            </section>
+            <section id="contato">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-1 col-lg-2"></div>
+                        <div class="col-xs-12 col-sm-6 col-md-5 col-lg-4">
+                            <h2>Contato</h2>
+                            <hr>
+                            <p>Rua da Praia, 676, Sala 102, Centro<br>
+                            Porto Alegre - RS</p>
+                            <p><a href="mailto:andale">contato@andale.com.br</a></p>
+                            <p><br><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3454.217049519587!2d-51.234485124623774!3d-30.030630330635667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9519790fe362d2a1%3A0xc2f25092bd20c21f!2sR.%20dos%20Andradas%20-%20Centro%20Hist%C3%B3rico%2C%20Porto%20Alegre%20-%20RS!5e0!3m2!1spt-BR!2sbr!4v1694663539379!5m2!1spt-BR!2sbr" width="80%" height="200" style="border:1px solid #b1afaf; border-radius: 10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-5 col-lg-4 borda">
+                            <form>
+                                <label class="form-label mb-0" for="nome">Seu nome</label>
+                                <input class="form-control mb-3" type="text" id="nome" />
+                                <label class="form-label mb-0" for="fone">Telefone</label>
+                                <input class="form-control mb-3" type="tel" id="fone" />
+                                <label class="form-label mb-0" for="email">E-mail</label>
+                                <input class="form-control mb-4" type="email" id="email" />
+                                <select class="form-select mb-3" aria-label="Selecionar pacotes de interesse">
+                                        <option selected>Selecione o pacote do seu interesse</option>
+                                        <option value="1">Uma volta nos Andes</option>
+                                        <option value="2">Majestosa Patagônia</option>
+                                        <option value="3">Ruas da alegria!</option>
+                                        <option value="4">Caribe colombiano</option>
+                                </select>
+                                <div class="mb-0 d-flex justify-content-center">
+                                    <button class="btn btn-info" type="button">Enviar</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-md-1 col-lg-2"></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                    <div class="d-flex align-items-center justify-content-center" style="height: 80px;">
+                        <div>&reg;&#161;Andale! - Turismo sulamericano</div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6  d-flex align-items-center justify-content-center">
+                    <img src="./icons/facebook.png" class="m-2" />
+                    <img src="./icons/instagram.png" class="m-2" />
+                    <img src="./icons/youtube.png" class="m-2" />
+                </div>
+            </div>
+        </div>
+    </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
